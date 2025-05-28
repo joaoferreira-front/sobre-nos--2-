@@ -1,0 +1,162 @@
+.nossas-fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 300px);
+  gap: var(--espaco-entre-fotos);
+  align-content: center;
+  justify-content: center;
+  padding: var(--espacamento-secoes);
+}
+
+.nossas-fotos img {
+  width: var(--tamanho-imagem);
+  height: 310px;
+  object-fit: cover;
+  box-shadow: var(--sombra-suave);
+  padding: 13px 10px 40px;
+  
+}
+
+#nossas-fotos h2 {
+  text-align: center;
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-subtitulo);
+  font-weight: var(--peso-subtitulo);
+  color: var(--cor-titulo);
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.315);
+}
+
+#nossa-historia {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px var(--padding-lateral);
+  margin-bottom: 40px;
+  background-color: var(--cor-caixa-texto);
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.nossa-historia > h2 {
+
+  text-align: center;
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-subtitulo);
+  font-weight: var(--peso-subtitulo);
+  color: var(--cor-titulo);
+}
+
+.nossa-historia > p {
+  text-align: center;
+  font-size: var(--tamanho-texto);
+  font-weight: var(--peso-texto);
+}
+/* ========================================
+   CRONÔMETRO - ESTILOS ADICIONAIS
+   ======================================== */
+
+#cronometro-section {
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: var(--cor-fundo);
+}
+
+.cronometro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--cor-caixa-texto);
+  padding: 30px;
+  border-radius: var(--borda-radius);
+  box-shadow: var(--sombra-suave);
+}
+
+.cronometro-titulo {
+  color: var(--cor-titulo);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.315);
+}
+
+.cronometro-subtitulo {
+  color: var(--cor-texto);
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.cronometro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.cronometro-item {
+  background: linear-gradient(135deg, var(--cor-destaque), var(--cor-titulo));
+  color: white;
+  padding: 20px 15px;
+  border-radius: var(--borda-radius);
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease;
+}
+
+.cronometro-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.cronometro-numero {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  margin-bottom: 5px;
+}
+
+.cronometro-label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cronometro-info {
+  color: var(--cor-texto);
+  font-size: 14px;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cronometro-container {
+    margin: 0 15px;
+    padding: 20px;
+  }
+
+  .cronometro-titulo {
+    font-size: 22px;
+  }
+
+  .cronometro-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .cronometro-item {
+    padding: 15px 8px;
+  }
+
+  .cronometro-numero {
+    font-size: 20px;
+  }
+
+  .cronometro-label {
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .nossas-fotos {
+    grid-template-columns: 1fr;
+  }
+}
